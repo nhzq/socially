@@ -17,7 +17,6 @@ class DB
     {
     	try {
             $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
-            echo "is connected";
         } catch(PDOException $e) {
         	die($e->getMessage());
         }
@@ -34,6 +33,17 @@ class DB
 
         return self::$_instance;
     }
+
+    //To be used by other class
+    public function getConnection()
+    {
+        return $this->_pdo;
+    }
+
+    /*=====================
+        Query function
+    =====================*/
+
 
 }
 
