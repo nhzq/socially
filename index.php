@@ -1,3 +1,5 @@
+Can you contact me with your CV at charles@swiftlabs.my? I need your contact. Thanks.
+
 <?php  
 
 	require_once 'core/init.php';
